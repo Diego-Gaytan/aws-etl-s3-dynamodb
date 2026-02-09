@@ -19,10 +19,10 @@ Este proyecto automatiza la ingesta de archivos de texto. Detecta archivos subid
 ## 4. Arquitectura del Sistema
 ```mermaid
 graph LR
-    User([Usuario]) -- "1. Sube archivo" --> S3[Amazon S3\n(Bucket)]
-    S3 -- "2. Dispara Evento" --> Lambda[AWS Lambda\n(Python)]
-    Lambda -- "3a. Si es URGENTE" --> DDB[(Amazon DynamoDB)]
-    Lambda -- "3b. Si es NORMAL" --> Logs[CloudWatch Logs]
+    User([Usuario]) -- "1. Sube archivo" --> S3["Amazon S3 (Bucket)"]
+    S3 -- "2. Dispara Evento" --> Lambda["AWS Lambda (Python)"]
+    Lambda -- "3a. Si es URGENTE" --> DDB[("Amazon DynamoDB")]
+    Lambda -- "3b. Si es NORMAL" --> Logs["CloudWatch Logs"]
     
     style S3 fill:#E1F5FE,stroke:#01579B
     style Lambda fill:#FFF3E0,stroke:#FF6F00
